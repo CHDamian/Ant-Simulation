@@ -143,8 +143,7 @@ int main(int argc, char* argv[])
 
             if( !state_next[i].goes_to_edge(num_ants)
                 && state_next[i + state_next[i].dir].is_active
-                && state_next[i].x == state_next[i + state_next[i].dir].x
-                && state_next[i].dir != state_next[i + state_next[i].dir].dir) state_next[i].dir = state_next[i].switch_dir();
+                && state_next[i].x == state_next[i + state_next[i].dir].x) state_next[i].dir = state_next[i].switch_dir();
 
         }
 
